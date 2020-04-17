@@ -104,10 +104,27 @@
         scr(e.deltaY>0?1:-1);
       });
 
-      document.addEventListener('touchstart', function(e) {
-        scr(1);
-      }, false);
+      var touch_start_y = 0;
 
+      element.addEventListener( 'touchstart', function( e ) {
+        if ( e.type === 'touchstart' && e.touches.length === 1 ) {
+          touch_start_y = e.touches[0].pageY;
+        }
+      }, false );
+
+
+      element.addEventListener( 'touchend', function( e ) {
+
+        if( touch_start_y - e.touches[0].pageY> 0 && Math.abs(touch_start_y - e.touches[0].pageY) > 50)
+          src(1);
+        else
+          src(-1);
+
+          touch_start_y = 0;
+
+          e.preventDefault( );
+
+      }, false );
 
 
 
