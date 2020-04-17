@@ -1,93 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>OSS 소개 페이지</title>
+  <head>
+    <meta charset="UTF-8">
+    <title>OSS 소개 페이지</title>
+    <style>
+      #body {
+        position: fixed;
+        left: 50%;
+        transform: translate(-50%,0%);
+        margin: auto;
+        max-width: 650px;
+        font-family: "Arial";
+        height: 2000px;
+      }
+
+      hr{
+        width: available;
+        border-color: #000000;
+      }
+
+      h1, h2 {
+        margin-top: 50px;
+        text-align: center;
+      }
+
+      h2 {
+        margin-top: -20px;
+      }
+
+      ul{
+        margin-top: 40px;
+      }
+
+      footer {
+        position: fixed;
+        text-align: center;
+
+        left: 50%;
+        top: 90%;
+        transform: translate(-50%,0%);
+      }
+
+      #main{
+        margin-top: 50px;
+      }
+
+      #Thankyou {
+        text-align: center;
+        margin-top: 50px;
+      }
 
 
-</head>
-<body>
+    </style>
+    <script type="text/javascript">
+      let delta = 0;
+      document.addEventListener('wheel', e => {
+        delta += e.deltaY;
 
-<header>
-  <h1>오픈소스소프트웨어개발 자기소개</h1>
-  <h2>4주차 과제</h2>
+        document.getElementsByTagName('label')[0].innerText = delta;
+      });
+    </script>
+  </head>
+  <body>
+    <div id="body">
+      <header>
 
-  <hr></hr>
+        <h1>오픈소스소프트웨어개발 자기소개</h1>
+        <h2>4주차 과제</h2>
 
-  <ul><b>인적사항</b>
-    <li>team : T4</li>
-    <li>year : 2</li>
-    <li>name : Choi-JongIng</li>
-    <li>ID : 2018045196</li>
-    <li>major : Computer Science and Engineering</li>
-  </ul>
+        <label>asdasdasdas</label>
 
-</header>
+        <hr></hr>
 
-<section id = "zelda">
-  <ul><b>깃헙 링크</b>
-    <li><a href= "https://github.com/Choi-Jongin">18 최종인</a></li>
-    <li><a href= "https://github.com/Jaejuna">17 정재준</a></li>
-    <li><a href= "https://github.com/binnr791">19 빈현우</a></li>
-    <li><a href="https://github.com/kikyo424 ">19 김효성</a> </li>
-    <li><a href= "https://github.com/kikyo424">19 백승우</a></li>
-  </ul>
-</section>
+        <ul><b>인적사항</b>
+          <li>team : T4</li>
+          <li>year : 2</li>
+          <li>name : Choi-JongIng</li>
+          <li>ID : 2018045196</li>
+          <li>major : Computer Science and Engineering</li>
+        </ul>
 
- <section id = "main">
-   안녕하세요 컴퓨터전공 2학년 23세살 최종인입니다.
-   2학년이지만 1학년 1학기를 이수하지 않아 저를 모르시는 분들도 많을거 같네요
-   한 학기 동안 열심히 해보겠습니다.
- </section>
+      </header>
 
+      <section id = "zelda">
+        <ul><b>깃헙 링크</b>
+          <li><a href= "https://github.com/Choi-Jongin">18 최종인</a></li>
+          <li><a href= "https://github.com/Jaejuna">17 정재준</a></li>
+          <li><a href= "https://github.com/binnr791">19 빈현우</a></li>
+          <li><a href="https://github.com/kikyo424 ">19 김효성</a> </li>
+          <li><a href= "https://github.com/kikyo424">19 백승우</a></li>
+        </ul>
+      </section>
 
-<section id = "Thankyou">감사합니다.</section>
-</body>
+       <section id = "main">
+         안녕하세요 컴퓨터전공 2학년 23세살 최종인입니다.
+         2학년이지만 1학년 1학기를 이수하지 않아 저를 모르시는 분들도 많을거 같네요
+         한 학기 동안 열심히 해보겠습니다.
+       </section>
 
-<footer>
-  <address>Designed by Hanyang Erica in Ansan</address>
-</footer>
+      <section id = "Thankyou">감사합니다.</section>
+    </div>
 
-<style>
-  body {
-    margin: auto;
-    max-width: 650px;
-    font-family: "Arial";
-   }
-
-  hr{
-    width: available;
-    border-color: #000000;
-  }
-
-  h1, h2 {
-    margin-top: 50px;
-    text-align: center;
-  }
-
-  h2 {
-    margin-top: -20px;
-  }
-
-  ul{
-    margin-top: 40px;
-  }
-
-  footer {
-    margin-top: 200px;
-    margin-bottom: 30px;
-    text-align: center;
-  }
-
-  #main{
-    margin-top: 50px;
-  }
-
-  #Thankyou {
-    text-align: center;
-    margin-top: 50px;
-  }
-
-</style>
-
+    <footer>
+      <address>Designed by Hanyang Erica in Ansan</address>
+    </footer>
+  </body>
 </html>
