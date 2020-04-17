@@ -80,7 +80,7 @@
 
         delta += dir
 
-        f( delta > max )
+        if( delta > max )
         delta = max;
         if( delta < min)
           delta = min;
