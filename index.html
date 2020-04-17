@@ -76,11 +76,12 @@
       let max = 3;
       let min = 0;
 
-      document.addEventListener('wheel', e => {
-        delta += e.deltaY>0?1:-1;
+      function scr( dir ){
 
-        if( delta > max )
-          delta = max;
+        delta += dir
+
+        f( delta > max )
+        delta = max;
         if( delta < min)
           delta = min;
 
@@ -97,7 +98,17 @@
         if( delta == 3 )
           document.querySelector(".main").classList.toggle("select");
 
+      };
+
+      document.addEventListener('wheel', e => {
+        scr(e.deltaY>0?1:-1);
       });
+
+      document.addEventListener('touchstart', function(e) {
+        scr(1);
+      }, false);
+
+
 
 
     </script>
